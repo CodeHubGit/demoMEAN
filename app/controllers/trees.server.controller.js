@@ -132,6 +132,20 @@ exports.list = function(req, res) { Tree.find().sort('-created').populate('user'
 };
 
 /**
+ * List of Trees sorted by price
+ */
+exports.listByPrice = function(req, res) { Tree.find().sort('-price').populate('user', 'displayName').exec(function(err, trees) {
+    if (err) {
+        return res.send(400, {
+            message: getErrorMessage(err)
+        });
+    } else {
+        res.jsonp(trees);
+    }
+});
+};
+
+/**
  * Tree middleware
  */
 exports.treeByID = function(req, res, next, id) { Tree.findById(id).populate('user', 'displayName').exec(function(err, tree) {
