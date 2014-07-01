@@ -1,0 +1,20 @@
+[
+    {
+        "maxHeight": 12,
+        "currentHeight": 11.5,
+        "price": 40,
+        "species": "aspen"
+    },
+    {
+        "maxHeight": 14,
+        "currentHeight": 6,
+        "price": 12,
+        "species": "pine"
+    },
+    {
+        "maxHeight": 40,
+        "currentHeight": 15,
+        "price": 80,
+        "species": "oak"
+    }
+]
